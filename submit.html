@@ -35,44 +35,45 @@
       </header>
       <!--  -->
       <main class="px-3">
-        <h1>Submit Your Idea</h1>
-        <br />
-        <!--  -->
-        <!-- <p class="lead">
+        <form>
+          <h1>Submit Your Idea</h1>
+          <br />
+          <!--  -->
+          <!-- <p class="lead">
           <h5>Open Source Material</h5>
           <ul id="dapp-opensource" class="collapsible"></ul>
         </p> -->
-        <!--  -->
-        <h5>Proprietary Copyrights</h5>
-        <ul id="dapp-copyrights" class="collapsible"></ul>
+          <!--  -->
+          <h5>Proprietary Copyrights</h5>
+          <ul id="dapp-copyrights" class="collapsible"></ul>
 
-        <input id="dapp-copyright-name" placeholder="Work name..." /><br />
-        <input
-          id="dapp-copyright-description"
-          placeholder="Description..."
-        /><br />
-        <span> Image <input id="dapp-copyright-image" type="file" /></span
-        ><br />
-        <input id="dapp-pinata-api-key" placeholder="Pinata API Key" /><br />
+          <input id="dapp-copyright-name" placeholder="Work name..." /><br />
+          <input
+            id="dapp-copyright-description"
+            placeholder="Description..."
+          /><br />
+          <span> Image <input id="dapp-copyright-image" type="file" /></span
+          ><br />
+          <input id="dapp-pinata-api-key" placeholder="Pinata API Key" /><br />
 
-        <input
-          id="dapp-pinata-secret-api-key"
-          placeholder="Pinata Secret API Key"
-          type="password"
-        />
-        <br />
-        <p>
-          <label>
-            <input id="dapp-opensource-toggle" type="checkbox" />
-            <span>Check to Open Source</span>
-          </label>
-        </p>
-        <br />
+          <input
+            id="dapp-pinata-secret-api-key"
+            placeholder="Pinata Secret API Key"
+            type="password"
+          />
+          <br />
+          <p>
+            <label>
+              <input id="dapp-opensource-toggle" type="checkbox" />
+              <span>Check to Open Source</span>
+            </label>
+          </p>
+          <br />
 
-        <button id="dapp-copyright" href="#" onclick="dApp.copyrightWork()">
-          Submit Idea
-        </button>
-
+          <button id="dapp-copyright" href="#" onclick="dApp.copyrightWork()">
+            Submit Idea
+          </button>
+        </form>
         <br />
         <small>
           Note: Pinata requests are done locally via your browser.<br />
