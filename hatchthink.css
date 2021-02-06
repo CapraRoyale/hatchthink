@@ -1,4 +1,5 @@
 /* Original Template by Mdo https://twitter.com/mdo for Bootstrap https://getbootstrap.com/*/
+
 /*
  * Globals
  */
@@ -21,7 +22,7 @@ body {
 }
 
 .cover-container {
-  max-width: 42em;
+  max-width: 50em;
 }
 
 /*
@@ -47,4 +48,10 @@ body {
 .nav-masthead .active {
   color: #fff;
   border-bottom-color: #fff;
+}
+
+.truncate {
+  height: 200px;
+  overflow-wrap: break-word;
+  overflow: hidden;
 }
