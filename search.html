@@ -67,45 +67,6 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript">
-      $("#idea_search").on("click", function (event) {
-        // Contain the form entry in a variable
-        query = $("#description_input").val();
-        // Put search query in a variable
-        var queryURL =
-          "https://developer.uspto.gov/ipmarketplace-api/search/query?searchText=" +
-          query;
-        // jQuery's AJAX function handles the RESTful API call
-        $.ajax({
-          url: queryURL,
-          method: "GET",
-        }).then(function (response) {
-          var results = response.results;
-
-          console.log(results);
-
-          for (var i = 0; i < results.length; i++) {
-            //
-            id = results[i].recordIdentifier;
-            //
-            nameTxt = results[i].assigneeNameText;
-            //
-            text = results[i].inventionAbstractText;
-            //
-            result =
-              '<div class="col"><div class="card h-100 bg-secondary text-light"><div class="card-header text-dark"> ID: ' +
-              id +
-              " - " +
-              nameTxt +
-              "</div>" +
-              '<div class="card-body"><div class="col truncate">' +
-              text +
-              "</div></div></div></div><br><br>";
-            //
-            $("#results_text").append(result);
-          }
-        });
-      });
-    </script>
+    <script src="search.js"></script>
   </body>
 </html>

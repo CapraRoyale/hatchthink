@@ -25,7 +25,9 @@
             <a class="nav-link" href="submit.html">Submit</a>
             <a class="nav-link" href="collab.html">Collaborate</a>
             <a class="nav-link" href="search.html">Search</a>
-            <a class="nav-link active" aria-current="page" href="invest.html">Invest</a>
+            <a class="nav-link active" aria-current="page" href="invest.html"
+              >Invest</a
+            >
             <a class="nav-link" href="#">About</a>
           </nav>
         </div>
@@ -36,13 +38,15 @@
         <br />
         <p class="lead">
           Found and idea here that you want to support?
-          <br>
+          <br />
           Click below to invest.
         </p>
         <br />
+        <div id="result-text"></div>
+        <br />
         <p class="lead">
           <a
-            href="search.html"
+            href="#"
             class="btn btn-lg btn-secondary fw-bold border-white bg-white"
             >Invest</a
           >
@@ -58,5 +62,50 @@
         </p>
       </footer>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function (event) {
+        if (location.hash) {
+          query = location.hash.slice(1);
+
+          console.log("success");
+          console.log(query);
+          // Put search query in a variable
+          var queryURL =
+            "https://developer.uspto.gov/ipmarketplace-api/search/query?searchText=" +
+            query;
+          // jQuery's AJAX function handles the RESTful API call
+          $.ajax({
+            url: queryURL,
+            method: "GET",
+          }).then(function (response) {
+            var results = response.results;
+
+            console.log(results[0]);
+            //
+            id = results[0].recordIdentifier;
+            //
+            nameTxt = results[0].assigneeNameText;
+            //
+            text = results[0].inventionAbstractText;
+            //
+            result =
+              '<div class="col"><div class="card h-100 bg-dark text-light"><div class="card-header bg-secondary text-light"> ID: ' +
+              id +
+              " - By: " +
+              nameTxt +
+              "</div>" +
+              '<div class="card-body"><div class="col truncate">' +
+              text +
+              "</div></div><div></div></div></div><br><br>";
+            //
+            $("#result-text").append(result);
+          });
+        }
+      });
+
+      $("#idea_invest").on("click", function (event) {});
+    </script>
+
   </body>
 </html>
