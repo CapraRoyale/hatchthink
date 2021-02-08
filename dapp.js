@@ -2,7 +2,7 @@
 const contract_address = "0xeD5D7513a4FED3dE2d9E36Afa9637a37a7BD9E35";
 
 // TODO: access GitHub Pages Environmental variables
-if (env.PINATA_API_KEY){
+if (process.env.PINATA_API_KEY){
   console.log("Pinata API Key Found")
 };
 

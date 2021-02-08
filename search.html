@@ -38,19 +38,23 @@
         <br />
         <p class="lead">Begin Your Search Here!</p>
 
+        <!-- <form class="form-inline" action="#"> -->
         <div class="row">
-          <form action="#">
+          <div class="col-8">
             <input
               type="text"
               id="description_input"
               placeholder="Idea Description"
+              class="form-control form-control-sm"
             />
-
-            <button id="idea_search" class="btn btn-sm fw-bold bg-white">
+          </div>
+          <div class="col-4">
+            <button id="idea_search" class="btn btn-sm fw-bold bg-white form-control">
               Search
             </button>
-          </form>
+          </div>
         </div>
+        <!-- </form> -->
         <br />
         <br />
         <div class="row row-cols-3 g-4" id="results_text"></div>

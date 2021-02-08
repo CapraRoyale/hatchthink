@@ -36,7 +36,19 @@
       <!--  -->
       <main class="px-3">
         <form>
-          <h1>Submit Your Idea</h1>
+          <div class="row">
+            <h1>Submit Your Idea</h1>
+            <hr />
+            <br />
+            <div class="col">
+              <input id="dapp-pinata-api-key" placeholder="Pinata API Key" />
+              <input
+                id="dapp-pinata-secret-api-key"
+                placeholder="Pinata Secret API Key"
+                type="password"
+              />
+            </div>
+          </div>
           <br />
           <!--  -->
           <!-- <p class="lead">
@@ -47,32 +59,41 @@
           <ul id="dapp-copyrights" class="collapsible"></ul> -->
           <!-- TODO: Define Form Requirements -->
           <!-- TODO: Add a button to add sub-elements -->
-          <input id="dapp-copyright-name" placeholder="Work name..." /><br />
-          <input
-            id="dapp-copyright-description"
-            placeholder="Description..."
-          /><br />
-          <span> Image <input id="dapp-copyright-image" type="file" /></span
-          ><br />
-          <input id="dapp-pinata-api-key" placeholder="Pinata API Key" /><br />
-
-          <input
-            id="dapp-pinata-secret-api-key"
-            placeholder="Pinata Secret API Key"
-            type="password"
-          />
+          <div class="row">
+            <div class="col">
+              <input id="dapp-copyright-name" placeholder="Work name..." />
+              <input
+                id="dapp-copyright-description"
+                placeholder="Description..."
+              />
+            </div>
+          </div>
           <br />
-          <p>
-            <label>
-              <input id="dapp-opensource-toggle" type="checkbox" />
-              <span>Check to Open Source</span>
-            </label>
-          </p>
-          <br />
-
-          <button id="dapp-copyright" href="#" onclick="dApp.copyrightWork()">
-            Submit Idea
-          </button>
+          <div class="row">
+            <div class="col">
+              <input
+                id="dapp-copyright-image"
+                placeholder="Image/Video/etc."
+                type="file"
+              />
+            </div>
+            <div class="col">
+              <label>
+                <input id="dapp-opensource-toggle" type="checkbox" />
+                <span>Check to Open Source</span>
+              </label>
+            </div>
+            <div class="col">
+              <button
+                class="button"
+                id="dapp-copyright"
+                href="#"
+                onclick="dApp.copyrightWork()"
+              >
+                Submit Idea
+              </button>
+            </div>
+          </div>
         </form>
         <br />
         <small>
