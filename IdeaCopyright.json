@@ -5,7 +5,7 @@
 			{
 				"indexed": false,
 				"internalType": "uint256",
-				"name": "copyright_id",
+				"name": "idea_id",
 				"type": "uint256"
 			},
 			{
@@ -17,11 +17,11 @@
 			{
 				"indexed": false,
 				"internalType": "string",
-				"name": "reference_uri",
+				"name": "ref_uri",
 				"type": "string"
 			}
 		],
-		"name": "Copyright",
+		"name": "idea",
 		"type": "event"
 	},
 	{
@@ -30,13 +30,13 @@
 			{
 				"indexed": false,
 				"internalType": "uint256",
-				"name": "copyright_id",
+				"name": "idea_id",
 				"type": "uint256"
 			},
 			{
 				"indexed": false,
 				"internalType": "string",
-				"name": "reference_uri",
+				"name": "ref_uri",
 				"type": "string"
 			}
 		],
@@ -49,7 +49,7 @@
 			{
 				"indexed": false,
 				"internalType": "uint256",
-				"name": "copyright_id",
+				"name": "idea_id",
 				"type": "uint256"
 			},
 			{
@@ -67,11 +67,11 @@
 		"inputs": [
 			{
 				"internalType": "string",
-				"name": "reference_uri",
+				"name": "ref_uri",
 				"type": "string"
 			}
 		],
-		"name": "copyrightWork",
+		"name": "ideaWork",
 		"outputs": [],
 		"payable": false,
 		"stateMutability": "nonpayable",
@@ -86,7 +86,7 @@
 				"type": "uint256"
 			}
 		],
-		"name": "copyrights",
+		"name": "ideas",
 		"outputs": [
 			{
 				"internalType": "address",
@@ -108,7 +108,7 @@
 		"inputs": [
 			{
 				"internalType": "string",
-				"name": "reference_uri",
+				"name": "ref_uri",
 				"type": "string"
 			}
 		],
@@ -123,11 +123,11 @@
 		"inputs": [
 			{
 				"internalType": "uint256",
-				"name": "copyright_id",
+				"name": "idea_id",
 				"type": "uint256"
 			}
 		],
-		"name": "renounceCopyrightOwnership",
+		"name": "renounceideaOwnership",
 		"outputs": [],
 		"payable": false,
 		"stateMutability": "nonpayable",
@@ -138,7 +138,7 @@
 		"inputs": [
 			{
 				"internalType": "uint256",
-				"name": "copyright_id",
+				"name": "idea_id",
 				"type": "uint256"
 			},
 			{
@@ -147,7 +147,7 @@
 				"type": "address"
 			}
 		],
-		"name": "transferCopyrightOwnership",
+		"name": "transferideaOwnership",
 		"outputs": [],
 		"payable": false,
 		"stateMutability": "nonpayable",
